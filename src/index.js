@@ -5,5 +5,6 @@ import ReactDOM from 'react-dom';
 import Home from './pages/home';
 
 ReactDOM.render(
-    
+    <Home title="Title"></Home>,
+    document.getElementById('root')
 )

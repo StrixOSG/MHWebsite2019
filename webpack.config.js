@@ -6,6 +6,7 @@ const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 const OptimizeCss = require('optimize-css-assets-webpack-plugin');
 
+
 module.exports = {
 
     entry: {
@@ -75,13 +76,24 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: ['babel-loader']
+            },
+            {
+                test: /\.(mov|mp4)$/,
+                use: [
+                  {
+                    loader: 'file-loader',
+                    options: {
+                      name: '[name].[ext]'
+                    }  
+                  }
+                ]
             }
         ]
     },
     resolve: {
         extensions: [
             '.js',
-            '.scss'
+            '.scss',
         ]
     }
 }

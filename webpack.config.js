@@ -50,7 +50,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     plugins: [
-        new CleanWebpackPlugin(['dist']),
+        new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: "style.css",
             chunkFilename: "[name].css"

@@ -78,7 +78,7 @@ module.exports = {
                 use: ['babel-loader']
             },
             {
-                test: /\.(mov|mp4)$/,
+                test: /\.(mov|mp4|png)$/,
                 use: [
                   {
                     loader: 'file-loader',
